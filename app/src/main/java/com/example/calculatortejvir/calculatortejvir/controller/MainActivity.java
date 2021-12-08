@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void generateQuestion() {
         edAnswer.setText(null);
-        num = (int) (4* Math.random()+1);
+        num = (int) (3* Math.random()+1);
         operatorFirst = 1 + (int) (Math.random() * 900);
         operatorSecond = 1 + (int) (Math.random() * 900);
         if(num == 1) {
@@ -86,12 +86,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             question = operatorFirst + " " + operator + " " + operatorSecond;
             tvQuestion.setText(question);
             correctAnswer = operatorFirst * operatorSecond;
-        }
-        else if(num == 4) {
-            operator = '/';
-            question = operatorFirst + " " + operator + " " + operatorSecond;
-            tvQuestion.setText(question);
-            correctAnswer = operatorFirst / operatorSecond;
         }
 
     }
